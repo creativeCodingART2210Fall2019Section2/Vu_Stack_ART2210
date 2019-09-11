@@ -12,4 +12,12 @@ sample. This not a is
 
 <div align=left>
 
-This is a      .
+1/1
+
+<div align=center>
+
+Canvas
+
+<div align=right>
+
+Stack Vu
