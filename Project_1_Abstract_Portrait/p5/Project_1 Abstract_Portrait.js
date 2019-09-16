@@ -1,21 +1,21 @@
 /*let img;
 function preload(){
 
-    img=loadImage("file:///Users/StackVu/Downloads/School/Fall_2019/ART_2210/Project_1 _ Abstract_Portrait/p5/Canvas2.jpg");
+    img=loadImage("https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/blob/master/Image%20Folder/Canvas2.jpg");
 
 }
 */
 function setup(){
  
     createCanvas(1200,1000);
-    //Image(img,0,0);
 }
  
 function draw(){
     //<body background="Canvas2.jpg"></body>
     //background(180,196,211);
     //background(246,245,239); 
-   background(238,215,192)
+    background(238,215,192);
+
     
 
     translate(0,100)
