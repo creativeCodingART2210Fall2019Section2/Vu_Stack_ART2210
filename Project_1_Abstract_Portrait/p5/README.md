@@ -4,15 +4,22 @@ Is this the README you want?
 
 <div align=center>
 
-##Ryan Hewett
+## Ryan Hewett
 Instagram: @ryhew
 
 ![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Image%20Folder/Untitled1_RyanHewett.jpg)
 
 ![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Image%20Folder/Untitled2_RyanHewett.jpg)
 
-##Santiago Crescimone
+## Santiago Crescimone
 
 ![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Image%20Folder/SantiagoCrescimone_KandinskyPortrait.jpg)
 
+## Christa Rijneveld
+Instagram: @christarijn
 
+![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Project_1_Abstract_Portrait/p5/Image%20Folder/Christa%20Rijneveld1.jpg)
+
+![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Project_1_Abstract_Portrait/p5/Image%20Folder/Christa%20Rijneveld2.jpg)
+
+![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Project_1_Abstract_Portrait/p5/Image%20Folder/Christa%20Rijneveld3.jpg)
