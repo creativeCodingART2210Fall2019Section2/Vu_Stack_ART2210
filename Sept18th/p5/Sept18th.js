@@ -49,7 +49,7 @@ drawFlashingCircles();
     let x1= map(mouseX,0,width,0,255,true);
     let x2= map(mouseY,0,width,0,255,true);
     let x3= map(mouseY,0,width,0,255,true);
-    stroke(x1,x2,x3);
+    stroke(random(255),random(255),random(255));
  
     if (keyIsPressed){
      var targetX=mouseX;
