@@ -17,7 +17,7 @@ function draw(){
 
     
 
-    translate(0,100)
+    translate(0,50)
   
     drawLine1(); //Neck
    
@@ -43,7 +43,6 @@ function draw(){
 
     strokeWeight(6); //
 
-    drawShoulders();
 
     strokeWeight(1); //
 
@@ -80,21 +79,37 @@ function draw(){
 */
     //drawLoopTest();
 
-    drawBauhaus1();
     drawAddOn();
 
     
-    drawLinesPlease2();
-    drawCoverUp();
     
-    strokeWeight(1);
+    strokeWeight(3);
     drawLinesPlease();
 
-    drawWhatIsThis();
+    //noStroke();
+    drawQuadCoverUp();
 
+    strokeWeight(3);
+    drawLinesPlease2();
     
-   
+    
+    //drawWhatIsThis();
 
+    noStroke();
+
+    drawCoverUp();
+
+    drawBauhaus1();
+    strokeWeight(5);
+    drawMoreMountainLines();
+
+    //noStroke();
+    //drawBIV();
+   
+    drawStars();
+    drawGlassesFinal();
+
+    drawShoulders();
 }
 
 function drawLine1(){ //Neck
@@ -230,7 +245,7 @@ function drawHair2(){ //drawHair2
 
 function drawShoulders(){  //Shoulders
 
-    line(565,570,750,570);
+    line(552,570,750,570);
     line(200,590,328,590);
 
 
@@ -264,7 +279,7 @@ function drawBackHair(){ //BackHair
 
 function drawEar(){
 
-    stroke('0,0,0');;
+    stroke('0,0,0');
     var x1=500
     var y1=200
     var x2=350
@@ -390,33 +405,33 @@ function drawAddOn(){
    textFont('Helvetica');
    text('k',850,550);
 */
+
    textSize(40);
    noStroke();
-   stroke(250,250,250,0);
+   fill(250,250,250,50);
    textFont('Helvetica');
    text('THE',722,250);
 
    textSize(40);
    noStroke();
-   stroke(250,250,250,50);
+   fill(250,250,250,75);
    textFont('Helvetica');
    text('ONE',722,300);   
 
    textSize(40);
    noStroke();
-   stroke(250,250,250,75);
+   fill(250,250,250,100);
    textFont('Helvetica');
    text('&',722,400);
 
    textSize(40);
    noStroke();
-   stroke(250,250,250,100);
+   fill(250,250,250,125);
    textFont('Helvetica');
    text('ONLY',722,500);
 
    textSize(40);
-   noStroke();
-   stroke(250,250,250);
+   fill(250,250,250);
    textFont('Helvetica');
    text('STACK',722,550);
 
@@ -446,17 +461,31 @@ function drawBackGround2(){
 function drawBauhaus1(){
     
     noStroke();
+    //fill(164,5,8,200);
     fill(250,250,250,200);
     quad(698,620,720,600,1000,600,1000,620);
 
+    //fill(230,149,31,300);
     fill(250,250,250,300);
     quad(677-3,640+3,698-3,620+3,950,620+3,950,640+3);
 
+    //fill(237,220,56,200);
     fill(250,250,250,200);
     quad(657-6,660+6,679-6,640+6,900,640+6,900,660+6);
 
+    //fill(8,145,31,300);
     fill(250,250,250,300);
     quad(636-9,680+9,658-9,660+9,850,660+9,850,680+9);
+
+    
+}
+
+function drawBIV(){
+
+    fill(5,98,157,200);
+    quad(593,720,620,695,850,695,850,720);
+
+
 }
 
 function drawWhatIsThis(){
@@ -474,36 +503,95 @@ function drawWhatIsThis(){
     
 }
 
-function drawLinesPlease(){
+function drawMoreMountainLines(){
 
-    for (var i=140; i<500; i += 20) {
-        strokeWeight(1);
-        line(200,590,i+i*2,900)
-    
-    }
+strokeWeight(5);
+stroke(255,200,122);
+line(600,600,304,748);
+line(600,600,678,635);
 
 }
 
+function drawLinesPlease(){
+    strokeWeight(3);
+    for (var i=140; i<500; i += 20) {
+        //no loop here :c
+        stroke(255,200,122);
+        line(200,590,i+i*2,900)
+    }
+    
+    stroke(255,200,122);
+    line(200,590,650,700);
+
+}
+
+
 function drawLinesPlease2(){
 
-    strokeWeight(1);
+    strokeWeight(3);
     for (var i=50; i<2500; i += 60) {
         line(600,600,i-i/2,900);
 
 
     }
 
+
+}
+
+function drawStars(){
+
+    fill(33,144,250);
+    strokeWeight(1);
+    stroke(250,250,250,200);
+   
+        ellipse(150,300,7,7);
+        ellipse(180,285,9,9);
+        ellipse(200,265,6,6);
+
+    fill(232,190,61);
+        ellipse(50,50,11,11);
+    fill(33,144,250);
+        ellipse(350,80,10,10);
+
+        ellipse(180,380,5,5);
+    fill(184,47,253);
+        ellipse(183,400,7,7);
+    fill(33,144,250);
+        ellipse(180,420,4,4);
+
+        ellipse(90,550,7,7);
+        ellipse(380,500,7,7);
+ 
 }
 
 function drawCoverUp(){
 
 fill(0,0,0);
-    noStroke();
-    quad(400,900,624,689,1200,689,1200,900);
 
-    triangle(331.5,500,331.5,664,400,635.5);
+    quad(400,900,624,689,1200,689,1200,950);
 
+    triangle(331.5,500,331.5,664,400,635.5); 
+
+    quad(0,850,303,750,407,910,0,950);
+}
+
+function drawQuadCoverUp(){
+
+fill(0,0,0);
+    strokeWeight(.5);
     quad(500,650,304,750,400,898,665.5,650);
+    strokeWeight(3);
+    quad()
+}
+
+function drawGlassesFinal(){
+
+    strokeWeight(5);
+    stroke(250,250,250);
+    noFill();
+        line(450,310,700,310);
+        line(700,310,700,360);
+        line(700,360,650,360);
 
 }
 
