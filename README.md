@@ -1,16 +1,9 @@
-# Vu_Stack_ART2210
 
-This is a sample.
-
-This is not a sample.
-
-sample. This not a is
+## BEHOLD!
+All of my dreams and aspirations in one picture.
 
 <div align=center>
 
+![](https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/raw/master/Cat%20Pictures/Cat%20on%20Mountain.png)
 
 <div align=left>
-
-This is a   .
-
-Edited a little bit on 9/16.
