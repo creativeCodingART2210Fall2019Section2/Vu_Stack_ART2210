@@ -1,13 +1,15 @@
-/*let img;
-function preload(){
-
-    img=loadImage("https://github.com/TheOneAndOnlyStack/Vu_Stack_ART2210/blob/master/Image%20Folder/Canvas2.jpg");
-
-}
+/*let dots = []
+let pressed = false;
+let noOfDots = 50;
 */
 function setup(){
  
     createCanvas(1200,1000);
+   /* frameRate(19);
+    for (let i=0; i < noOfDots; i++){
+        dots[i]= new dots();
+    }*/
+
 }
  
 function draw(){
@@ -110,6 +112,8 @@ function draw(){
     drawGlassesFinal();
 
     drawShoulders();
+
+    //drawfloatingCircles();
 }
 
 function drawLine1(){ //Neck
@@ -593,6 +597,59 @@ function drawGlassesFinal(){
         line(700,310,700,360);
         line(700,360,650,360);
 
+}
+
+function drawfloatingCircles(){
+
+for(let i=0; i<noOfDots; i++){
+    dots[i].display();
+}
+
+class Dot{
+    constructor(){
+        this.reset();
+    }
+    grow(){
+        this.CurrStroke+=this.speed;
+        if(this.CurrStroke > this.GoalStroke){
+            this.reset()
+        }
+    }
+    reset(){
+        this.x = this.getRandomInt(windowWidth)
+        this.y = this.getRandomInt(windowHeight)
+        this.GoalStroke = this.getRandomInt(50,150)
+        this.CurrStroke = 0;
+        this.r = this.getRandomInt(255)
+        this.g = this.getRandomInt(255)
+        this.b = this.getRandomInt(255)
+        this.a = 0.4
+    this.speed = this.getRandomInt(0,3)
+    console.log(this.speed);
+    }
+    display(){
+        let dotColor = 'rgba('+this.r+','+this.g+','+this.b+','+this.a+')';
+        strokeWeight(this.CurrStroke);
+    stroke(dotColor);
+    if(pressed) this.moveToMouse();
+        PointerEvent(this.x,this.y);
+        this.grow();
+    }
+    getRandomInt(i,j=null){
+        if(j===null) return Math.ceil(random(i))
+        else return Math.ceil(random(i,j))
+    }
+    moveToMouse(){
+        console.log("mouse",mouseX,mouseY)
+        console.log("this",this.x,this.y)
+
+        if(this.x-speed > mouseX) this.x -= this.speed;
+        else if(this.x+this.speed < mouseX) this.x += this.speed;
+
+        if(this.y-speed > mouseY) this.y -= this.speed;
+        else if(this.y+this.speed < mouseY) this.y += this.speed;
+    }
+}
 }
 
 function windowResized(){
