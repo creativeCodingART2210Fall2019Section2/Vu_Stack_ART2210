@@ -1,26 +1,32 @@
-/*let dots = []
-let pressed = false;
-let noOfDots = 50;
-*/
+var stars = [];
+
 function setup(){
  
-    createCanvas(1200,1000);
-   /* frameRate(19);
-    for (let i=0; i < noOfDots; i++){
-        dots[i]= new dots();
-    }*/
-
+    createCanvas(windowWidth,1000);
+    
+    for (var i=0; i<300; i++){
+      
+        var star = {
+           x: random(width),
+           y: random(height),
+           diameter: random(4)
+    
+        };
+        
+        stars.push(star);
+     }    
+    
 }
- 
+
 function draw(){
     
     //background(238,215,192);
     background(0,0,0);
 
-    
+   
 
     translate(0,50)
-  
+
     drawLine1(); //Neck
    
     strokeWeight(1); //
@@ -98,22 +104,36 @@ function draw(){
     //drawWhatIsThis();
 
     noStroke();
-
     drawCoverUp();
 
+    frameRate(10);
+    drawStars();
+
+    frameRate(1.5);
     drawBauhaus1();
     strokeWeight(5);
     drawMoreMountainLines();
 
-    //noStroke();
-    //drawBIV();
+    noStroke();
+    drawBIV();
    
-    drawStars();
+    
     drawGlassesFinal();
 
     drawShoulders();
 
-    //drawfloatingCircles();
+    translate(0,-50);
+    drawStarlight();
+  
+}
+
+function drawStarlight(){
+
+    for (var i = 0; i < stars.length; i++){
+        fill(255);
+        noStroke();
+        ellipse(stars[i].x,stars[i].y,stars[i].diameter,stars[i].diameter);
+    }
 }
 
 function drawLine1(){ //Neck
@@ -249,6 +269,7 @@ function drawHair2(){ //drawHair2
 
 function drawShoulders(){  //Shoulders
 
+    stroke('0,0,0');
     line(552,570,750,570);
     line(200,590,328,590);
 
@@ -377,6 +398,7 @@ function drawLoopTest(){
    }
 }
 
+
 function drawAddOn(){
  
  /*  textSize(40);
@@ -435,7 +457,7 @@ function drawAddOn(){
    text('ONLY',722,500);
 
    textSize(40);
-   fill(250,250,250);
+   fill(255);
    textFont('Helvetica');
    text('STACK',722,550);
 
@@ -462,32 +484,71 @@ function drawBackGround2(){
 
 }
 
+function drawStars(){
+    frameRate(10);
+    noStroke();
+        fill(33,144,250);
+        stroke(250,250,250,200);
+        strokeWeight(random(3));
+            ellipse(150,300,7,7);
+        strokeWeight(random(3));
+            ellipse(180,285,9,9);
+        strokeWeight(random(3));
+            ellipse(200,265,6,6);
+        
+        
+        fill(232,190,61);
+        strokeWeight(random(3));
+            ellipse(50,50,11,11);
+        fill(33,144,250);
+        strokeWeight(random(3));
+            ellipse(350,80,10,10);
+    
+            ellipse(180,380,5,5);
+        fill(184,47,253);
+        strokeWeight(random(3));
+            ellipse(183,400,7,7);
+        fill(33,144,250);
+        strokeWeight(random(3));
+            ellipse(180,420,4,4);
+        strokeWeight(random(3));
+            ellipse(90,550,7,7);
+        strokeWeight(random(3));
+            ellipse(380,500,7,7);
+     
+    }
+    
 function drawBauhaus1(){
+    frameRate(1.5);
     
     noStroke();
     //fill(164,5,8,200);
-    fill(250,250,250,200);
+    //fill(255,255,255,200);
+    fill(random(255),0,0,200)
     quad(698,620,720,600,1000,600,1000,620);
 
     //fill(230,149,31,300);
-    fill(250,250,250,300);
+    //fill(255,255,255,300);
+    fill(random(255),random(150),0);
     quad(677-3,640+3,698-3,620+3,950,620+3,950,640+3);
 
     //fill(237,220,56,200);
-    fill(250,250,250,200);
+    //fill(255,255,255,200);
+    fill(random(237),random(255),56,200);
     quad(657-6,660+6,679-6,640+6,900,640+6,900,660+6);
 
     //fill(8,145,31,300);
-    fill(250,250,250,300);
+    //fill(255,255,255,300);
+    fill(random(237),56,random(255),200);
     quad(636-9,680+9,658-9,660+9,850,660+9,850,680+9);
 
     
 }
 
 function drawBIV(){
-
-    fill(5,98,157,200);
-    quad(593,720,620,695,850,695,850,720);
+    frameRate(1.5);
+    fill(random(255),0,random(255),200);
+    quad(593,720,620,695,780,695,780,720);
 
 
 }
@@ -508,7 +569,7 @@ function drawWhatIsThis(){
 }
 
 function drawMoreMountainLines(){
-
+    
 strokeWeight(5);
 stroke(255,200,122);
 line(600,600,304,748);
@@ -520,6 +581,7 @@ function drawLinesPlease(){
     strokeWeight(3);
     for (var i=140; i<500; i += 20) {
         //no loop here :c
+        
         stroke(255,200,122);
         line(200,590,i+i*2,900)
     }
@@ -542,37 +604,11 @@ function drawLinesPlease2(){
 
 }
 
-function drawStars(){
-
-    fill(33,144,250);
-    strokeWeight(1);
-    stroke(250,250,250,200);
-   
-        ellipse(150,300,7,7);
-        ellipse(180,285,9,9);
-        ellipse(200,265,6,6);
-
-    fill(232,190,61);
-        ellipse(50,50,11,11);
-    fill(33,144,250);
-        ellipse(350,80,10,10);
-
-        ellipse(180,380,5,5);
-    fill(184,47,253);
-        ellipse(183,400,7,7);
-    fill(33,144,250);
-        ellipse(180,420,4,4);
-
-        ellipse(90,550,7,7);
-        ellipse(380,500,7,7);
- 
-}
-
 function drawCoverUp(){
 
 fill(0,0,0);
 
-    quad(400,900,624,689,1200,689,1200,950);
+    quad(400,900,624,689,1200,689,1500,950);
 
     triangle(331.5,500,331.5,664,400,635.5); 
 
@@ -589,9 +625,9 @@ fill(0,0,0);
 }
 
 function drawGlassesFinal(){
-
+frameRate(1.75);
     strokeWeight(5);
-    stroke(250,250,250);
+    stroke(255);
     noFill();
         line(450,310,700,310);
         line(700,310,700,360);
@@ -599,58 +635,6 @@ function drawGlassesFinal(){
 
 }
 
-function drawfloatingCircles(){
-
-for(let i=0; i<noOfDots; i++){
-    dots[i].display();
-}
-
-class Dot{
-    constructor(){
-        this.reset();
-    }
-    grow(){
-        this.CurrStroke+=this.speed;
-        if(this.CurrStroke > this.GoalStroke){
-            this.reset()
-        }
-    }
-    reset(){
-        this.x = this.getRandomInt(windowWidth)
-        this.y = this.getRandomInt(windowHeight)
-        this.GoalStroke = this.getRandomInt(50,150)
-        this.CurrStroke = 0;
-        this.r = this.getRandomInt(255)
-        this.g = this.getRandomInt(255)
-        this.b = this.getRandomInt(255)
-        this.a = 0.4
-    this.speed = this.getRandomInt(0,3)
-    console.log(this.speed);
-    }
-    display(){
-        let dotColor = 'rgba('+this.r+','+this.g+','+this.b+','+this.a+')';
-        strokeWeight(this.CurrStroke);
-    stroke(dotColor);
-    if(pressed) this.moveToMouse();
-        PointerEvent(this.x,this.y);
-        this.grow();
-    }
-    getRandomInt(i,j=null){
-        if(j===null) return Math.ceil(random(i))
-        else return Math.ceil(random(i,j))
-    }
-    moveToMouse(){
-        console.log("mouse",mouseX,mouseY)
-        console.log("this",this.x,this.y)
-
-        if(this.x-speed > mouseX) this.x -= this.speed;
-        else if(this.x+this.speed < mouseX) this.x += this.speed;
-
-        if(this.y-speed > mouseY) this.y -= this.speed;
-        else if(this.y+this.speed < mouseY) this.y += this.speed;
-    }
-}
-}
 
 function windowResized(){
 
