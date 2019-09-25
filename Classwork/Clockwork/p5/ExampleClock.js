@@ -1,3 +1,5 @@
+//Credit TheCodingTrain
+
 function setup(){
  
     createCanvas(windowWidth,windowHeight);
