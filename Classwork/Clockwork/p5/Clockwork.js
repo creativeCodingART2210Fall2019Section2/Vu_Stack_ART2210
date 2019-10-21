@@ -610,7 +610,9 @@ function drawSquuu(){
 
 
 function windowResized(){
+
     resizeCanvas(windowWidth,windowHeight);
     angleMode(DEGREES);
+    
  }
  
