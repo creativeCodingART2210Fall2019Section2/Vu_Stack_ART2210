@@ -7,7 +7,7 @@ let theta = 0.0;
 let r = (0,255);
 let g = (0,255);
 let b = (0,255);
-//var keyIsPressed = keyIsPressed;
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -44,7 +44,7 @@ for (i=0; i<5000; i++){
 
 
 function draw() {
-  background(0); // translucent background (creates trails)
+  background(0); // translucent background (creates trails), but slow
 
   
   for(var i = 0; i<stars.length; i++)

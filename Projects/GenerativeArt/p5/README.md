@@ -1,1 +1,1 @@
-[Link](https://theoneandonlystack.github.io/Vu_Stack_ART2210//Projects/GenerativeArt/p5/GenerativeArt.html)
+[Link](https://theoneandonlystack.github.io/Vu_Stack_ART2210//Projects/GenerativeArt/p5/Stars.html)
