@@ -2,4 +2,4 @@
 
 # 
 
-Stars is my attempt at generative art! 
+Stars is my attempt at generative art. 

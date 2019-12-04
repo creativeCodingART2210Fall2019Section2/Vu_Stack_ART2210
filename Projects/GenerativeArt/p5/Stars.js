@@ -24,6 +24,7 @@ for (i=0; i<5000; i++){
   stars.push(new Star(x,y,col,size));
   n++;
 
+  //console.log(stars);
 }
 
 /*while(n<5000){
@@ -136,6 +137,7 @@ Star.prototype.flee = function(target){
   }
   else return createVector(0,0);
 
+  
 }
 
 Star.prototype.arrive = function(target){
