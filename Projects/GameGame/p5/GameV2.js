@@ -184,7 +184,7 @@ function updatebombpos(){
 
 function initbomber2(){
   for(var i=0; i<numofbombs2; i++){
-    bombacceleration2[i] = random(0.06, 0.09);
+    bombacceleration2[i] = random(0.05, 0.08);
     bombvelocity2[i] = random(0, 13);
     bombposX2[i] = random(0,-120);
     //bombposX2[i] = random(height);
